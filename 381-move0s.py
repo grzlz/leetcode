@@ -7,11 +7,10 @@ def move_zeros(array):
     for i in range(len(array)):
         if array[i] == 0:
             zeros_positions.append(i)
+        print(zeros_positions)
 
- 
-
-    for i in zeros_positions:
-        del array[i]
+    for i in range(len(zeros_positions)):
+        array.remove(0)
 
     for i in range(len(zeros_positions)):
         array.insert(i, 0)
