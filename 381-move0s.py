@@ -1,20 +1,20 @@
 # Given an array of integers, write a function that moves all 0's to the end while maintaining the relative order of the other elemnts
 
-array = [1, 2, 3, 0, 4, 5, 0, 3]
+array = [1, 0, 3, 5, 3, 2, 0, 3, 0, 1]
+
+# Use two pointer strategy
 
 def move_zeros(array):
-    zeros_positions = []
-    for i in range(len(array)):
-        if array[i] == 0:
-            zeros_positions.append(i)
-        print(zeros_positions)
+    j = 0
+    for number in array:
+        if number != 0:
+            array[j] = number
+            j += 1
 
-    for i in range(len(zeros_positions)):
-        array.remove(0)
+    while j < len(array):
+        array[j] = 0
+        j+=1
 
-    for i in range(len(zeros_positions)):
-        array.insert(i, 0)
-
-    print(array)
+    print(array) 
 
 move_zeros(array)
