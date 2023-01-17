@@ -11,9 +11,8 @@ def move_zeros(array):
             array[j] = number
             j += 1
 
-    while j < len(array):
-        array[j] = 0
-        j+=1
+    for idx in range(j, len(array)):
+        array[idx] = 0
 
     print(array) 
 
