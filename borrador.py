@@ -1,14 +1,10 @@
-def validMtn(array):
-    if(len(array) < 3):
-        return False
-    i = 1
-    while(i < len(array) and array[i] > array[i-1]):
-        i += 1
-    
-    if(i == len(array) or i == 1):
-        return False
 
-    while(i < len(array) and array[i] < array[i-1]):
-        i += 1
+def m(lista):
+    new_list = []
 
-    return i == len(array)
+    for i in lista:
+        new_list.append(i + 1)
+
+    return new_list
+
+print(m([1, 2, 3]))
